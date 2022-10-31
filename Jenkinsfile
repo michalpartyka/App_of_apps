@@ -41,7 +41,7 @@ pipeline {
                 }
             }
           }
-          stage('Deploy application') {
+          /*stage('Deploy application') {
             steps {
                 script {
                     withEnv(["FRONTEND_IMAGE=$frontendImage:$frontendDockerTag", 
@@ -52,7 +52,7 @@ pipeline {
                     }
                 }
             }
-          }          
+          }*/         
 	  stage('Selenium tests') {
             steps {
               sh "pip3 install -r test/selenium/requirements.txt"
